@@ -17,11 +17,11 @@ function updateStepper() {
         const stepNumber = index + 1;
 
         if (stepNumber === currentStep) {
-            circle.classList.remove('bg-gray-300', 'text-gray-600');
-            circle.classList.add('bg-blue-500', 'text-white');
+            circle.classList.remove('bg-[#FFE1AF]', 'text-gray-600');
+            circle.classList.add('bg-[#957C62]', 'text-white');
         } else {
-            circle.classList.remove('bg-blue-500', 'text-white');
-            circle.classList.add('bg-gray-300', 'text-gray-600');
+            circle.classList.remove('bg-[#957C62]', 'text-white');
+            circle.classList.add('bg-[#FFE1AF]', 'text-gray-600');
         }
     });
 

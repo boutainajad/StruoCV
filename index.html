@@ -15,38 +15,46 @@
     </style>
 </head>
 
-<body class="bg-gradient-to-r from-gray-100 to-gray-400 min-h-screen">
-
+<body class="bg-gradient-to-r from-[#FFE1AF] to-[#FFE1AF] min-h-screen relative overflow-x-hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="absolute z-[-3] h-[70%]">
+        <path fill="#B77466" fill-opacity="1"
+            d="M0,288L13.3,256C26.7,224,53,160,80,117.3C106.7,75,133,53,160,69.3C186.7,85,213,139,240,138.7C266.7,139,293,85,320,90.7C346.7,96,373,160,400,165.3C426.7,171,453,117,480,122.7C506.7,128,533,192,560,218.7C586.7,245,613,235,640,218.7C666.7,203,693,181,720,154.7C746.7,128,773,96,800,122.7C826.7,149,853,235,880,240C906.7,245,933,171,960,128C986.7,85,1013,75,1040,85.3C1066.7,96,1093,128,1120,122.7C1146.7,117,1173,75,1200,53.3C1226.7,32,1253,32,1280,53.3C1306.7,75,1333,117,1360,160C1386.7,203,1413,245,1427,266.7L1440,288L1440,0L1426.7,0C1413.3,0,1387,0,1360,0C1333.3,0,1307,0,1280,0C1253.3,0,1227,0,1200,0C1173.3,0,1147,0,1120,0C1093.3,0,1067,0,1040,0C1013.3,0,987,0,960,0C933.3,0,907,0,880,0C853.3,0,827,0,800,0C773.3,0,747,0,720,0C693.3,0,667,0,640,0C613.3,0,587,0,560,0C533.3,0,507,0,480,0C453.3,0,427,0,400,0C373.3,0,347,0,320,0C293.3,0,267,0,240,0C213.3,0,187,0,160,0C133.3,0,107,0,80,0C53.3,0,27,0,13,0L0,0Z">
+        </path>
+    </svg>
     <main class="mx-auto max-w-4xl px-4 py-10">
         <header class="mb-8">
-            <a class="text-2xl font-extrabold text-gray-600">CVmaker</a>
+            <a class="text-2xl font-extrabold text-[#FFE1AF]">CVmaker</a>
         </header>
 
         <div class="text-center">
-            
+
             <h1 id="page-title" class="text-3xl font-bold text-white mb-12">Mes Données</h1>
 
             <div class="relative max-w-2xl mx-auto mb-12">
                 <div class="absolute top-6 left-0 right-0 h-1 bg-gray-300" style="left: 10%; right: 10%;"></div>
-                <div id="progress-line" class="absolute top-6 h-1 bg-blue-500 transition-all duration-300" style="width: 0%; left: 10%;"></div>
+                <div id="progress-line" class="absolute top-6 h-1 bg-[#957C62] transition-all duration-300"
+                    style="width: 0%; left: 10%;"></div>
 
                 <div class="relative flex justify-between px-8">
                     <div class="step-item flex flex-col items-center">
-                        <div class="step-circle w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white mb-2 relative z-10 transition-all duration-300">
+                        <div
+                            class="step-circle w-12 h-12 rounded-full  bg-gray-300 flex items-center justify-center text-white mb-2 relative z-10 transition-all duration-300">
                             <i class="fa-solid fa-user"></i>
                         </div>
                         <p class="text-sm font-medium text-gray-700">Mes Données</p>
                     </div>
 
                     <div class="step-item flex flex-col items-center">
-                        <div class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
+                        <div
+                            class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
                             <i class="fa-solid fa-file"></i>
                         </div>
                         <p class="text-sm font-medium text-gray-700">Contenu</p>
                     </div>
 
                     <div class="step-item flex flex-col items-center">
-                        <div class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
+                        <div
+                            class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
                             <i class="fa-solid fa-pen"></i>
                         </div>
                         <p class="text-sm font-medium text-gray-700">Modèle</p>
@@ -63,9 +71,11 @@
 
                 <form id="step-1" class="form-step">
                     <div class="flex gap-6 mb-6">
-                        <div class="flex flex-col items-center justify-center w-32 h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
+                        <div
+                            class="flex flex-col items-center justify-center w-32 h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                             <input type="file" id="photo-upload" class="hidden" accept="image/*">
-                            <label for="photo-upload" class="flex flex-col items-center justify-center cursor-pointer w-full h-full">
+                            <label for="photo-upload"
+                                class="flex flex-col items-center justify-center cursor-pointer w-full h-full">
                                 <i class="fa-solid fa-camera text-3xl text-gray-400 mb-2"></i>
                                 <p class="text-xs text-gray-500 text-center px-2">Ajouter une photo</p>
                             </label>
@@ -74,11 +84,15 @@
                         <div class="flex-1 grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Prénom</label>
-                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre prénom">
+                                <input type="text"
+                                    class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Votre prénom">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Nom de famille</label>
-                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre nom">
+                                <input type="text"
+                                    class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Votre nom">
                             </div>
                         </div>
                     </div>
@@ -86,44 +100,107 @@
                     <div class="grid grid-cols-2 gap-4 mb-4">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Adresse e-mail</label>
-                            <input type="email" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="exemple@email.com">
+                            <input type="email"
+                                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="exemple@email.com">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Numéro de téléphone</label>
-                            <input type="tel" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="+212 6XX XXX XXX">
+                            <input type="tel"
+                                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="+212 6XX XXX XXX">
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Adresse</label>
-                        <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Votre adresse complète">
+                        <input type="text"
+                            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Votre adresse complète">
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Code postal</label>
-                            <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="20000">
+                            <input type="text"
+                                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="20000">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Ville/Localité</label>
-                            <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Casablanca">
+                            <input type="text"
+                                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Casablanca">
                         </div>
                     </div>
                 </form>
 
                 <form id="step-2" class="form-step hidden">
-               
+                       <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Expérience Professionnelle</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Titre du poste</label>
+                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Développeur Web">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
+                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'entreprise">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Date de début</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Date de fin</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                <textarea rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Décrivez vos responsabilités et réalisations..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">Formation</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Diplôme</label>
+                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Master en Informatique">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">École/Université</label>
+                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'établissement">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Année de début</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2020">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Année de fin</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2022">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
 
                 <form id="step-3" class="form-step hidden">
-                   
+
                 </form>
 
                 <div class="flex justify-between mt-8 pt-6 border-t border-gray-200">
-                    <button type="button" id="prev-btn" class="px-6 py-2 text-gray-600 hover:text-gray-800 font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <button type="button" id="prev-btn"
+                        class="px-6 py-2 text-[#B77466] hover:text-[#B77466] font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>
                         Précédent
                     </button>
-                    <button type="button" id="next-btn" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium transition-colors">
+                    <button type="button" id="next-btn"
+                        class="px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#B77466] font-medium transition-colors">
                         Suivant
                     </button>
                 </div>
@@ -131,7 +208,7 @@
         </div>
     </main>
 
-<script src="./assets/script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

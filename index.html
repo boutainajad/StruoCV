@@ -8,11 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
 </head>
 
 <body class="bg-gradient-to-r from-[#FFE1AF] to-[#FFE1AF] min-h-screen relative overflow-x-hidden">
@@ -49,7 +44,22 @@
                             class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
                             <i class="fa-solid fa-file"></i>
                         </div>
-                        <p class="text-sm font-medium text-gray-700">Contenu</p>
+                        <p class="text-sm font-medium text-gray-700">Expérience</p>
+                    </div>
+                     <div  class="step-item flex flex-col items-center">
+                        <div
+                            class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
+                            <i class="fa-solid fa-file"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">Formation</p>
+                    </div>
+
+                    <div  class="step-item flex flex-col items-center">
+                        <div
+                            class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
+                            <i class="fa-solid fa-file"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">Compétences</p>
                     </div>
 
                     <div class="step-item flex flex-col items-center">
@@ -108,7 +118,7 @@
                             <label class="block text-sm font-medium text-gray-700 mb-1">Numéro de téléphone</label>
                             <input type="tel"
                                 class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                placeholder="+212 6XX XXX XXX">
+                                placeholder="0x XX XXX XXX">
                         </div>
                     </div>
 
@@ -141,55 +151,74 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Titre du poste</label>
-                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Développeur Web">
+                                <input type="text" class="input-titre w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Développeur Web">
+
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
-                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'entreprise">
+                                <input type="text" class="input-entreprise w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'entreprise">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Date de début</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text" class="inpute-datedebut w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Date de fin</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text" class="input-datefin w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                                <textarea rows="4" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Décrivez vos responsabilités et réalisations..."></textarea>
+                                <textarea rows="4" class="input-description w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Décrivez vos responsabilités et réalisations..."></textarea>
                             </div>
+                              <button class ="addexper px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#B77466] font-medium transition-colors">add Expérience</button>
+                                <div id="displayexper"></div>
                         </div>
                     </div>
 
+                </form>
+                 <form id="step-3" class="form-step hidden">
                     <div class="mb-6">
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">Formation</h3>
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Diplôme</label>
-                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Master en Informatique">
+                                <input type="text" class=" input-diplome w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Master en Informatique">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">École/Université</label>
-                                <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'établissement">
+                                <input type="text" class=" input-ecole w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'établissement">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Année de début</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2020">
+                                    <input type="text" class=" input-debut w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2020">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Année de fin</label>
-                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2022">
+                                    <input type="text" class=" input-fin w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2022">
                                 </div>
                             </div>
+                            <button class ="addfor px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#B77466] font-medium transition-colors">add Expérience</button>
+                            <div id ="disformation"></div>
                         </div>
                     </div>
                 </form>
+                <form id="step-4" class="form-step hidden">
+                        <div class="grid grid-cols- gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Compétences Techniques</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="EX : C++, java ...">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Compétences Transverses</label>
+                                    <input type="text" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="EX : Communiquer efficacement, gérer les conflits ...">
+                                </div>
+                            </div>
+                </form>
 
-                <form id="step-3" class="form-step hidden">
+                <form id="step-5" class="form-step hidden">
                      <div class="mb-6">
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">Choisissez votre modèle</h3>
                         <div class="grid grid-cols-2 gap-4">
@@ -228,4 +257,4 @@
     <script src="./assets/script.js"></script>
 </body>
 
-</html>
+</html> 

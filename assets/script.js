@@ -1,4 +1,3 @@
-
 let currentStep = 1;
 const totalSteps = 8;
 
@@ -576,6 +575,65 @@ function validateStep3(){
  return isValid
 
 }
+
+function saveCV() {
+    localStorage.setItem("cvData", JSON.stringify(cvData));
+}
+
+function loadCVData() {
+    const storedData = localStorage.getItem("cvData");
+    if (storedData) cvData = JSON.parse(storedData);
+}
+
+function buildTemplate() {
+  loadCVData();
+
+  document.getElementById("tpl-nom").textContent = cvData.personalInfo.prenom + " " + cvData.personalInfo.nom || "";
+  document.getElementById("tpl-title").textContent = cvData.personalInfo.jobTitle || "Développeur Web"; 
+  document.getElementById("tpl-contact").textContent = cvData.personalInfo.email + " | " + cvData.personalInfo.phone || "";
+
+  document.getElementById("tpl-profile").textContent = cvData.personalInfo.profile || "";
+
+  document.getElementById("tpl-exp").innerHTML =
+      cvData.experiences.map(e => `
+        <div>
+          <p class="font-semibold">${e.titre} – ${e.entreprise}</p>
+          <p class="text-gray-600 text-sm">${e.dateDebut} - ${e.dateFin}</p>
+          <p>${e.description}</p>
+        </div>`).join("");
+
+  document.getElementById("tpl-form").innerHTML =
+      cvData.formations.map(f => `
+        <div>
+          <p class="font-semibold">${f.diplome} – ${f.ecole}</p>
+          <p class="text-gray-600 text-sm">${f.debut} - ${f.fin}</p>
+        </div>`).join("");
+
+  document.getElementById("tpl-tech").innerHTML =
+      cvData.competences.techniques.map(c => `<span class="px-2 py-1 bg-gray-200 rounded">${c}</span>`).join("");
+
+  document.getElementById("tpl-soft").innerHTML =
+      cvData.competences.transverses.map(c => `<span class="px-2 py-1 bg-gray-200 rounded">${c}</span>`).join("");
+
+  document.getElementById("tpl-lang").innerHTML =
+      cvData.langues.map(l => `<p>${l.langue} – ${l.niveau}</p>`).join("");
+
+  document.getElementById("tpl-cert").innerHTML =
+      cvData.certifications.map(c => `<p>${c.nom} – ${c.organisme} (${c.annee})</p>`).join("");
+
+  document.getElementById("tpl-loisir").innerHTML =
+      cvData.loisirs.map(l => `<span class="px-2 py-1 bg-gray-200 rounded">${l}</span>`).join("");
+
+  document.getElementById("cv-template").classList.remove("hidden");
+}
+
+
+
+
+document.getElementById("downloadBtn").addEventListener("click", () => {
+    buildTemplate();
+    html2pdf().from(document.getElementById("cv-template")).save();
+});
 
 nextBtn.addEventListener('click', (e) => {
     e.preventDefault();

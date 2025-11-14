@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body class="bg-gradient-to-r from-[#FFE1AF] to-[#FFE1AF] min-h-screen relative overflow-x-hidden">
@@ -46,7 +47,7 @@
                         </div>
                         <p class="text-sm font-medium text-gray-700">Expérience</p>
                     </div>
-                     <div  class="step-item flex flex-col items-center">
+                    <div class="step-item flex flex-col items-center">
                         <div
                             class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
                             <i class="fa-solid fa-graduation-cap"></i>
@@ -54,7 +55,7 @@
                         <p class="text-sm font-medium text-gray-700">Formation</p>
                     </div>
 
-                    <div  class="step-item flex flex-col items-center">
+                    <div class="step-item flex flex-col items-center">
                         <div
                             class="step-circle w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 mb-2 relative z-10 transition-all duration-300">
                             <i class="fa-solid fa-lightbulb"></i>
@@ -170,34 +171,44 @@
                 </form>
 
                 <form id="step-2" class="form-step hidden">
-                       <div class="mb-6">
+                    <div class="mb-6">
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">Expérience Professionnelle</h3>
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Titre du poste</label>
-                                <input type="text" class="input-titre w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Développeur Web">
+                                <input type="text"
+                                    class="input-titre w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: Développeur Web">
 
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
-                                <input type="text" class="input-entreprise w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'entreprise">
+                                <input type="text"
+                                    class="input-entreprise w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Nom de l'entreprise">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Date de début</label>
-                                    <input type="text" class="inpute-datedebut w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text"
+                                        class="inpute-datedebut w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Date de fin</label>
-                                    <input type="text" class="input-datefin w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text"
+                                        class="input-datefin w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                                <textarea rows="4" class="input-description w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Décrivez vos responsabilités et réalisations..."></textarea>
+                                <textarea rows="4"
+                                    class="input-description w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Décrivez vos responsabilités et réalisations..."></textarea>
                             </div>
-                              <button class ="addexper px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Expérience</button>
-                                <div id="displayexper" class="mt-4 space-y-3"></div>
+                            <button
+                                class="addexper px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Expérience</button>
+                            <div id="displayexper" class="mt-4 space-y-3"></div>
                         </div>
                     </div>
                 </form>
@@ -208,23 +219,33 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Diplôme</label>
-                                <input type="text" class="input-diplome w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Master en Informatique">
+                                <input type="text"
+                                    class="input-diplome w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: Master en Informatique">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">École/Université</label>
-                                <input type="text" class="input-ecole w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Nom de l'établissement">
+                                <input type="text"
+                                    class="input-ecole w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Nom de l'établissement">
                             </div>
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Année de début</label>
-                                    <input type="text" class="input-debut w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2020">
+                                    <input type="text"
+                                        class="input-debut w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        placeholder="2020">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700 mb-1">Année de fin</label>
-                                    <input type="text" class="input-fin w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2022">
+                                    <input type="text"
+                                        class="input-fin w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        placeholder="2022">
                                 </div>
                             </div>
-                            <button class ="addfor px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Formation</button>
+                            <button
+                                class="addfor px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Formation</button>
                             <div id="disformation" class="mt-4 space-y-3"></div>
                         </div>
                     </div>
@@ -235,17 +256,27 @@
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">Compétences</h3>
                         <div class="space-y-4">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Compétences Techniques</label>
-                                <input type="text" class="input-tech w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: C++, Java, Python...">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Compétences
+                                    Techniques</label>
+                                <input type="text"
+                                    class="input-tech w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: C++, Java, Python...">
                             </div>
-                            <button class="addtech px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Compétence Technique</button>
+                            <button
+                                class="addtech px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Compétence Technique</button>
                             <div id="distech" class="mt-4 space-y-2"></div>
 
                             <div class="mt-6">
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Compétences Transverses</label>
-                                <input type="text" class="input-transverse w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Communication, Gestion des conflits...">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Compétences
+                                    Transverses</label>
+                                <input type="text"
+                                    class="input-transverse w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: Communication, Gestion des conflits...">
                             </div>
-                            <button class="addtransverse px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Compétence Transverse</button>
+                            <button
+                                class="addtransverse px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Compétence Transverse</button>
                             <div id="distransverse" class="mt-4 space-y-2"></div>
                         </div>
                     </div>
@@ -257,11 +288,14 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Langue</label>
-                                <input type="text" class="input-langue w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Français, Anglais, Arabe...">
+                                <input type="text"
+                                    class="input-langue w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: Français, Anglais, Arabe...">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Niveau</label>
-                                <select class="input-niveau w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <select
+                                    class="input-niveau w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                                     <option value="">Sélectionnez un niveau</option>
                                     <option value="Débutant">Débutant</option>
                                     <option value="Intermédiaire">Intermédiaire</option>
@@ -270,7 +304,9 @@
                                     <option value="Langue maternelle">Langue maternelle</option>
                                 </select>
                             </div>
-                            <button class="addlangue px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Langue</button>
+                            <button
+                                class="addlangue px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Langue</button>
                             <div id="displangue" class="mt-4 space-y-3"></div>
                         </div>
                     </div>
@@ -281,18 +317,27 @@
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">Certifications</h3>
                         <div class="space-y-4">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Nom de la certification</label>
-                                <input type="text" class="input-certification w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: AWS Certified Solutions Architect">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nom de la
+                                    certification</label>
+                                <input type="text"
+                                    class="input-certification w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: AWS Certified Solutions Architect">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Organisme</label>
-                                <input type="text" class="input-organisme w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Amazon Web Services">
+                                <input type="text"
+                                    class="input-organisme w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: Amazon Web Services">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Année d'obtention</label>
-                                <input type="text" class="input-annee-certif w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="2024">
+                                <input type="text"
+                                    class="input-annee-certif w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="2024">
                             </div>
-                            <button class="addcertif px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Certification</button>
+                            <button
+                                class="addcertif px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Certification</button>
                             <div id="discertif" class="mt-4 space-y-3"></div>
                         </div>
                     </div>
@@ -304,27 +349,87 @@
                         <div class="space-y-4">
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Loisir</label>
-                                <input type="text" class="input-loisir w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ex: Lecture, Sport, Voyage, Photographie...">
+                                <input type="text"
+                                    class="input-loisir w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    placeholder="Ex: Lecture, Sport, Voyage, Photographie...">
                             </div>
-                            <button class="addloisir px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter Loisir</button>
+                            <button
+                                class="addloisir px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">Ajouter
+                                Loisir</button>
                             <div id="disloisir" class="mt-4 space-y-3 flex"></div>
                         </div>
                     </div>
                 </form>
 
                 <form id="step-8" class="form-step hidden">
-                     <div class="mb-6">
+                    <div class="mb-6">
                         <h3 class="text-lg font-semibold text-gray-800 mb-4">Choisissez votre modèle</h3>
                         <div class="grid">
-                            <div class="border-2 border-gray-300 rounded-lg p-4 cursor-pointer hover:border-blue-500 transition-colors">
+                            <div
+                                class="border-2 border-gray-300 rounded-lg p-4 cursor-pointer hover:border-blue-500 transition-colors">
                                 <div class="bg-gray-100 h-40 rounded mb-3 flex items-center justify-center">
                                     <i class="fa-solid fa-file-alt text-4xl text-gray-400"></i>
                                 </div>
                                 <h4 class="font-semibold text-center">Modèle Classique</h4>
                             </div>
                         </div>
+
+                        <div class="mt-6 flex justify-center">
+                            <button type="button" id="downloadBtn"
+                                class="px-6 py-2 bg-[#B77466] text-white rounded-lg hover:bg-[#A66356] font-medium transition-colors">
+                                Télécharger le CV
+                            </button>
+                        </div>
                     </div>
                 </form>
+
+                <div id="cv-template" class="hidden max-w-3xl mx-auto p-8 bg-white shadow-lg rounded-xl font-sans">
+                    <div class="text-center mb-8">
+                        <h1 id="tpl-nom" class="text-4xl font-bold text-gray-800"></h1>
+                        <p id="tpl-title" class="text-lg text-gray-600 italic"></p>
+                        <p id="tpl-contact" class="text-gray-700 mt-2"></p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Profil</h2>
+                        <p id="tpl-profile" class="text-gray-700"></p>
+                    </div>
+
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Expérience
+                            Professionnelle</h2>
+                        <div id="tpl-exp" class="space-y-4"></div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Formation</h2>
+                        <div id="tpl-form" class="space-y-4"></div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Compétences</h2>
+                        <div class="flex flex-wrap gap-2" id="tpl-tech"></div>
+                        <div class="flex flex-wrap gap-2 mt-2" id="tpl-soft"></div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Langues</h2>
+                        <div id="tpl-lang" class="space-y-1"></div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Certifications</h2>
+                        <div id="tpl-cert" class="space-y-1"></div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-semibold mb-2 border-b-2 border-gray-200 pb-1">Loisirs</h2>
+                        <div id="tpl-loisir" class="flex flex-wrap gap-2"></div>
+                    </div>
+                </div>
+
+
 
                 <div class="flex justify-between mt-8 pt-6 border-t border-gray-200">
                     <button type="button" id="prev-btn"
